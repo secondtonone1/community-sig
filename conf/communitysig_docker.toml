@@ -1,0 +1,25 @@
+title = "login toml config file"
+
+[base]
+    web_addr = "0.0.0.0:9699"
+    root_dir = "/data/community-sig"
+    var_dir = "/data/community-sig"
+    heart_max = 3000
+    heart_check = 600
+    grpc_addr = "0.0.0.0:8092"
+    service_name = "comsig-service"
+    peer_service_name = "status-service"
+[log_conf]
+    project = "community-sig"
+    name = "main"
+    log_dir  = "log"
+    log_level = "info"
+    max_day = 7
+    rotate_seconds = 36000
+    extname=""
+[register_center]
+    address = ["0.0.0.0:2181"]
+    timeout = 5
+
+
+

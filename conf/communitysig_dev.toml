@@ -1,0 +1,24 @@
+title = "login toml config file"
+
+[base]
+    web_addr = "0.0.0.0:9090"
+    root_dir = "D:/kyf/go-workspace/workspace/community-api"
+    var_dir = "D:/kyf/go-workspace/workspace/community-api"
+
+[log_conf]
+    project = "community"
+    extname = ""
+    name = "main"
+    log_dir  = "/log"
+    log_level = "info"
+    max_day = 7
+    rotate_seconds = 3600
+
+[database]
+    [database.community-api]
+        mysql_master_conf = "root:root@tcp(192.168.26.128:3306)/pscc?timeout=15s"
+        mysql_slave_conf = "root:root@tcp(192.168.26.128:3306)/pscc?timeout=15s"
+        enable = 1
+    max_open_conn = 50
+    max_idle_conn = 20
+    max_life_time = 3600
